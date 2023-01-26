@@ -89,8 +89,8 @@ function askUser() {
 async function init() {
     try {
         const answers = await askUser();
-        const buildContent = createReadMe(answers);
-        writeAsync('./written/README.md', buildContent);
+        const buildContent = generateMarkdown(answers);
+        writeAsync('./README copy.md', buildContent);
         // overwrites previous version - no new document
         console.log('README.md has been successfully created in the written folder.');
     } catch (err) {
