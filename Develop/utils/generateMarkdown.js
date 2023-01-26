@@ -1,3 +1,7 @@
+function generateMarkdown(data) {
+  return `# ${data.title}
+
+`;
 # ${answers.projectName}  
 ## Table of Contents ![badge](https://img.shields.io/badge/license-${answers.licensing}-blue)
 * [x] [Description](#description)
@@ -42,10 +46,7 @@ function renderLicenseSection(license) {}
 
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
 
-`;
 }
 
 module.exports = generateMarkdown;
