@@ -1,8 +1,8 @@
-// Declaration of all const
+// Declared const
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
-const generateMarkdown = require("/Users/macbookpro/Desktop/UCLA /Home-work/This-can-help/This-can-help/Develop/utils/generateMarkdown.js")
+const generateMarkdown = require("/Develop/utils/generateMarkdown.js")
 const writeAsync = util.promisify(fs.writeFile);
 
 // Series of Questions
@@ -64,7 +64,7 @@ function askUser() {
             message: 'How should people contribute to your project?',
             default: 'Contact via Github or email with details.',
         },
-        {   // check multiple options
+        {   // check options
             type: 'checkbox',
             name: 'composition',
             message: 'What language(s) used to create your project?',
@@ -90,7 +90,7 @@ async function init() {
     try {
         const answers = await askUser();
         const buildContent = generateMarkdown(answers);
-        writeAsync('./README copy.md', buildContent);
+        writeAsync('Develop/written/readme.md', buildContent);
         // overwrites previous version - no new document
         console.log('README.md has been successfully created in the written folder.');
     } catch (err) {

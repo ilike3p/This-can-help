@@ -1,6 +1,7 @@
 
 // create README from answers collected in index.js via inquirer questions
 // format for markdown
+
 function generateMarkdown(answers) {
   return `# ${answers}
 
