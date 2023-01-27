@@ -2,7 +2,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
-const generateMarkdown = require("/Develop/utils/generateMarkdown.js")
+const generateMarkdown = require("./utils")
 const writeAsync = util.promisify(fs.writeFile);
 
 // Series of Questions
@@ -90,7 +90,7 @@ async function init() {
     try {
         const answers = await askUser();
         const buildContent = generateMarkdown(answers);
-        writeAsync('Develop/written/readme.md', buildContent);
+        writeAsync('./written' buildContent);
         // overwrites previous version - no new document
         console.log('README.md has been successfully created in the written folder.');
     } catch (err) {
