@@ -2,7 +2,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
-const generateMarkdown = require("/ f")
+const generateMarkdown = require("./Js/generateMarkdown")
 const writeAsync = util.promisify(fs.writeFile);
 
 // Series of Questions
